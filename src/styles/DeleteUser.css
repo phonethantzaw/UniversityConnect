@@ -1,0 +1,23 @@
+/* src/components/DeleteUser.css */
+.delete-user-container {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.delete-user-container button {
+    padding: 8px 12px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-user-container button:hover {
+    background-color: #c82333;
+}
+
+.delete-user-container .error-message {
+    color: red;
+    margin-top: 5px;
+}
