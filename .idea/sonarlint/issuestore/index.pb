@@ -10,3 +10,9 @@ M
 :
 
 src/App.js,1/e/1e43fa63aecd2127be034b3fb9d4caa172275714
+G
+src/components/Login.js,e/7/e7ef19b456366f68ed8168b0e2fae2f7fdd28261
+G
+src/styles/Register.css,6/0/6003603cc71833712e5df3f44359eae77ca43951
+J
+src/components/Register.js,b/4/b4206fb6b0e792acb5cb1d2a073c8b41bc87dbcc
