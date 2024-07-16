@@ -17,6 +17,7 @@ export default function Reporting() {
 
     return (
         <div>
+            <br />
             <input type="text"
                    value={userId}
                    onChange={onChange}
@@ -24,6 +25,7 @@ export default function Reporting() {
             <div>
                 <h3>Reporting</h3>
                 <button onClick={() => handleReporterUsersClick(userId)}>Reporters of UserID: {userId}</button>
+                <br /><br />
                 <button onClick={() => handleReportedUsersClick(userId)}>Reporteds of UserID: {userId}</button>
             </div>
         </div>
