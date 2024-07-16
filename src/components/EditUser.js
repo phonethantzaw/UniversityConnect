@@ -45,9 +45,6 @@ function EditUser() {
                 <label>Username:</label>
                 <input type="text" name="username" value={user.username || ''} onChange={handleChange} />
 
-                <label>Password:</label>
-                <input type="password" name="password" value={user.password || ''} onChange={handleChange} />
-
                 <label>Email:</label>
                 <input type="email" name="email" value={user.email || ''} onChange={handleChange} />
 
@@ -71,7 +68,7 @@ function EditUser() {
                 )}
 
                 <button type="submit">Update</button>
-                {error && <p className="error-message">{error}</p>}
+                {/*{error && <p className="error-message">{error}</p>}*/}
             </form>
         </div>
     );

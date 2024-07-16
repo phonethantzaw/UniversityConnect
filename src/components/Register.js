@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from '../utils/axiosConfig'; // Use the configured Axios instance
+import axios from '../utils/axiosConfig';
 import '../styles/Register.css';
 import { useNavigate } from 'react-router-dom';
 

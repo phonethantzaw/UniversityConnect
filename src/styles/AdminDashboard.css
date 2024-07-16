@@ -1,4 +1,11 @@
-
+.admin-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 3px;
+    background-color: #f5f5f5;
+}
 .admin-page-container {
     display: flex;
     flex-direction: column;
