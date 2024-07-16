@@ -1,16 +1,14 @@
 /* Register.css */
-
-body {
-    font-family: Arial, sans-serif;
-    background: #f9f9f9;
+.register-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    padding: 3px;
+    background-color: #f5f5f5;
 }
 
-.container {
+.register-container {
     background: white;
     padding: 2rem;
     border-radius: 8px;
