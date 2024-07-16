@@ -60,7 +60,7 @@
 
 .user-actions button {
     padding: 8px 16px;
-    background-color: #dc3545;
+    background-color: #074E9F;
     color: white;
     border: none;
     border-radius: 4px;
@@ -68,7 +68,7 @@
 }
 
 .user-actions button:hover {
-    background-color: #c82333;
+    background-color: #074E9F;
 }
 
 .error-message {
