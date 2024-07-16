@@ -32,7 +32,7 @@ function Dashboard() {
                 <Route path="/resource" element={<Resource/>}/>
                 <Route path="/event" element={<Event />}/>
                 <Route path="/discussion" element={<Discussion/>}/>
-                <Route path="/blocking" element={<Blocking/>}/>
+                <Route path="/blocking" element={<Blocking userData={userData}/>}/>
                 <Route path="/blocked-users/:userId" element={<BlockedUsers />}/>
                 <Route path="/blocker-users/:userId" element={<BlockerUsers />}/>
                 <Route path="/reporting" element={<Reporting/>}/>

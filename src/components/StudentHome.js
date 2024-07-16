@@ -11,8 +11,7 @@ function StudentPage(props) {
                 <Link to="/discussion" className="nav-link">Discussion</Link>
                 <Link to="/resource" className="nav-link">Resource</Link>
                 <Link to="/event" className="nav-link">Event</Link>
-                <Link to="/create-block" className="nav-link">Blocking</Link>
-                <Link to={`/blocked-users/${props.userId}`} className="nav-link">Blocked User</Link>
+                <Link to="/blocking" className="nav-link">Blocking</Link>
                 <Link to={`/profile/filter/${props.userId}`} className="nav-link">Profile</Link>
             </nav>
             <div className="student-content">
