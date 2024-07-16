@@ -1,0 +1,41 @@
+.edit-profile-container {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+.edit-profile-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.edit-section {
+    margin-bottom: 15px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button-group button {
+    background-color: #074E9F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 20%;
+}
+
+.button-group button:hover {
+    background-color: #074E9F;
+}
+
