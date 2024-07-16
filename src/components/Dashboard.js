@@ -16,6 +16,12 @@ import Event from "./Event";
 import Discussion from "./Discussion";
 import Blocking from "./Blocking";
 import Reporting from "./Reporting";
+import CreateBlocking from "./CreateBlocking";
+import CreateReporting from "./CreateReporting";
+import EditUser from "./EditUser";
+import CreateUser from "./DeleteUser";
+import DeleteUser from "./DeleteUser";
+import AllUser from "./AllUser";
 
 function Dashboard() {
     const userData = localStorage.getItem('userId');
@@ -27,6 +33,9 @@ function Dashboard() {
                 <Route path="/admin/dashboard" element={<AdminDashboard userId={userData}/>} />
                 <Route path="/student/home" element={<StudentHome userId={userData}/>}/>
                 <Route path="/register" element={<Register />} />
+                <Route path="/edit-user/:userId" element={<EditUser/>}/>
+                <Route path="/create-user" element={<DeleteUser/>}/>
+                <Route path="/all-user" element={<AllUser />}/>
                 <Route path="/profile/filter/:userId" element={<Profile />} />
                 <Route path="/update-profile/:id" element={<UpdateProfile userId={userData}/>}/>
                 <Route path="/resource" element={<Resource/>}/>
@@ -35,9 +44,11 @@ function Dashboard() {
                 <Route path="/blocking" element={<Blocking userData={userData}/>}/>
                 <Route path="/blocked-users/:userId" element={<BlockedUsers />}/>
                 <Route path="/blocker-users/:userId" element={<BlockerUsers />}/>
+                <Route path="/create-blocking" element={<CreateBlocking/>}/>
                 <Route path="/reporting" element={<Reporting/>}/>
                 <Route path="/reporter-users/:userId" element={<ReporterUsers />}/>
                 <Route path="/reported-users/:userId" element={<ReportedUsers />}/>
+                <Route path="/create-reporting" element={<CreateReporting/>}/>
             </Routes>
         </Router>
     );

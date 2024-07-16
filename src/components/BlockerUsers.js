@@ -19,6 +19,7 @@ export default function BlockerUsers(){
         fetchBlockerUsers();
     }, [params.userId]);
 
+
     return(
         <div>
             <h3>Blocker User Lists</h3>

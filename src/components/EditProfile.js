@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import axios from '../utils/axiosConfig';
 import '../styles/EditProfile.css'; // Import the CSS file
 import TagSelector from './TagSelector'; // Import the TagSelector component
 

@@ -1,0 +1,52 @@
+.create-reporting-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.create-reporting-container h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.create-reporting-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-reporting-container label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.create-reporting-container select,
+.create-reporting-container button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px; /* Ensure text is readable */
+    color: #333; /* Ensure select text color is readable */
+    background-color: #fff; /* Ensure select background color */
+}
+
+.create-reporting-container select option {
+    color: #333; /* Force text color for options */
+    background-color: #fff; /* Force background color for options */
+}
+
+.create-reporting-container button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.create-reporting-container button:hover {
+    background-color: #0056b3;
+}
