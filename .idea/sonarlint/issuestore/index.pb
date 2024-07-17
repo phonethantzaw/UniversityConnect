@@ -96,3 +96,7 @@ I
 src/utils/refreshToken.js,6/0/601c490127c7f79c579137cdc1438aeb5c128be5
 H
 src/utils/axiosConfig.js,2/a/2a417bfc4965b7715997791a2073007eb398820d
+H
+src/components/LogOut.js,4/0/400e99f515e7ee38c1d40583705d4c0cf0e3c2e5
+N
+src/components/PrivateRoute.js,9/9/9931a66b140603cac115a0ea5f47aed1ac020cd5

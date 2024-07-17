@@ -1,42 +1,82 @@
 /* StudentPage.css */
-.student-wrapper{
+.student-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     padding: 3px;
-    background-color: #f5f5f5;
+    background-color: #eef2f5;
+    font-family: 'Arial', sans-serif;
 }
+
 .student-page-container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 95vh;
     width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
 }
 
 .student-nav-bar {
     background-color: #074E9F;
     display: flex;
     justify-content: space-around;
-    padding: 10px 0;
+    padding: 15px 0;
+    border-bottom: 3px solid #06397b;
 }
 
 .nav-link {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    padding: 10px 15px;
+    padding: 10px 20px;
     transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
 }
 
 .nav-link:hover {
-    background-color: #074E9F;
+    background-color: #06397b;
+    color: #fff;
+}
+
+button {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #06397b;
     color: #fff;
 }
 
 .student-content {
     flex: 1;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
     overflow-y: auto;
+}
+
+.welcome-banner {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.welcome-banner h1 {
+    font-size: 36px;
+    color: #074E9F;
+    margin-bottom: 10px;
+}
+
+.welcome-banner p {
+    font-size: 18px;
+    color: #555;
 }
