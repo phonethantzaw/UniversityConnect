@@ -53,7 +53,14 @@ const Post = ({ post, onDelete, setEditingPostId, editingPostId, onEdit }) => {
 
         try {
             const response = await axios.post('http://localhost:8080/discussions/threads', newReply);
-            fetchReplies();
+            const addedReply = {
+                id: response.data.id,
+                text: response.data.comment,
+                user: response.data.username,
+                createdOn: format(new Date(response.data.createdOn), 'MM-dd-yyyy HH:mm:ss'),
+                userId: response.data.userId,
+            };
+            setReplies([addedReply, ...replies]);
         } catch (error) {
             console.error("Error adding reply:", error);
         }
