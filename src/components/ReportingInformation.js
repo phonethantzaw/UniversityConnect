@@ -1,6 +1,7 @@
 // src/components/ReportingInformation.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {Button, Form} from "react-bootstrap";
 
 export default function ReportingInformation(props) {
     const [userId, setUserId] = useState('');
@@ -20,24 +21,24 @@ export default function ReportingInformation(props) {
     }
 
     return (
-        <div>
+        <div className="main-container">
             {userRole === "ADMIN" ? (
-                <div>
-                    <input
+
+                <Form>
+                    <Form.Control
                         type="text"
                         value={userId}
                         onChange={onChange}
                         placeholder="Enter User ID"
                     />
-                    <button onClick={() => handleReporterUsersClick(userId)}>Reporter Users of UserID: {userId}</button>
-                    <br />
-                    <br />
-                    <button onClick={() => handleReportedUsersClick(userId)}>Reported Users of UserID: {userId}</button>
-                </div>
+                    <Button onClick={() => handleReporterUsersClick(userId)}>Reporter Users of UserID: {userId}</Button>
+                    <Button onClick={() => handleReportedUsersClick(userId)}>Reported Users of UserID: {userId}</Button>
+                </Form>
+
             ) : userRole === "STUDENT" ? (
-                <div>
-                    <button onClick={() => handleReportedUsersClick(props.userId)}>Click to Watch Your Reported List</button>
-                </div>
+                <Form>
+                    <Button onClick={() => handleReportedUsersClick(props.userId)}>Click to Watch Your Reported List</Button>
+                </Form>
             ) : null}
         </div>
     );

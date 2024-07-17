@@ -1,14 +1,19 @@
+import {useEffect, useState} from "react";
+import {useNavigate, useParams} from "react-router-dom";
 import axios from "../utils/axiosConfig";
-import { useEffect, useState } from "react";
 import "../styles/BlockedUsers.css";
 
 export default function BlockedUsers() {
     const [blockedUsers, setBlockedUsers] = useState([]);
     const userId = localStorage.getItem("userId");
+    const params= useParams();
+    const navigate = useNavigate();
+    const userRole = localStorage.getItem('userRole');
+    const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
     const fetchBlockedUsers = async () => {
         try {
-            const response = await axios.get(`http://localhost:8080/users/${userId}/blockeds`);
+            const response = await axios.get(`${apiUrl}/users/${params.userId}/blockeds`);
             setBlockedUsers(response.data);
         } catch (error) {
             console.error('Error fetching blocked users:', error);

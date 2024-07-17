@@ -1,6 +1,7 @@
 import axios from "../utils/axiosConfig";
-import { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import "../styles/AllProfiles.css";
+import {Button, Card, Form} from "react-bootstrap";
 
 export default function AllProfiles() {
     const [profiles, setProfiles] = useState([]);
@@ -44,55 +45,57 @@ export default function AllProfiles() {
     };
 
     return (
-        <div className="all-profiles-container">
+        <div>
             <h3>All Profiles</h3>
-            <div className="search-container">
-                <input
-                    type="text"
-                    placeholder="Search by Username or User ID"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                />
-                <button onClick={handleSearch}>Search</button>
-                <button onClick={handleReset}>Reset</button>
+            <div className="main-container">
+                <Form>
+                    <Form.Control
+                        type="text"
+                        placeholder="Search by Username or User ID"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                    />
+                    <Button onClick={handleSearch}>Search</Button>
+                    <Button onClick={handleReset}>Reset</Button>
+                </Form>
+
             </div>
-            <ul>
+
+            <div>
                 {profiles.map((profile, index) => {
                     const user = users.find((user) => user.id === profile.userId);
                     return (
-                        <li key={index}>
-                            <div className="profile-section">
-                                <h4>User ID: {profile.userId}</h4>
-                                {user && <h4>Username: {user.username}</h4>}
-                            </div>
-                            <div className="profile-section">
-                                <h4>Achievements:</h4>
-                                <ul>
+                        <Card className="Card" key={index} style={{width: '18rem', marginBottom: '1rem'}}>
+                            <Card.Body>
+                                <Card.Text>
+                                    Username: {user.username}
+                                </Card.Text>
+                                <Card.Title>User ID: {profile.userId}</Card.Title>
+                                <Card.Text>
+                                    Achievements:
                                     {profile.achievements.map((achievement, i) => (
                                         <li key={i}>{achievement}</li>
                                     ))}
-                                </ul>
-                            </div>
-                            <div className="profile-section">
-                                <h4>Interests:</h4>
-                                <ul>
+                                </Card.Text>
+                                <Card.Text>
+                                    Interests:
                                     {profile.interests.map((interest, i) => (
                                         <li key={i}>{interest}</li>
                                     ))}
-                                </ul>
-                            </div>
-                            <div className="profile-section">
-                                <h4>Activities:</h4>
-                                <ul>
+                                </Card.Text>
+                                <Card.Text>
+                                    Activities:
                                     {profile.activities.map((activity, i) => (
                                         <li key={i}>{activity}</li>
                                     ))}
-                                </ul>
-                            </div>
-                        </li>
+                                </Card.Text>
+
+                            </Card.Body>
+                        </Card>
+
                     );
                 })}
-            </ul>
+            </div>
         </div>
     );
 }

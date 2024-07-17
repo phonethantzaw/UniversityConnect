@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import axios from '../utils/axiosConfig';
 import '../styles/Register.css';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
+import {Button, Form} from "react-bootstrap";
 
 function Register() {
     const [username, setUsername] = useState('');
@@ -15,6 +16,7 @@ function Register() {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
     const navigate = useNavigate();
+    const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
     const handleRegister = async (e) => {
         e.preventDefault();
@@ -41,7 +43,7 @@ function Register() {
                 requestBody.year = parseInt(year, 10); // Convert year to integer
             }
 
-            const response = await axios.post('http://localhost:8080/users', requestBody);
+            const response = await axios.post(`${apiUrl}/users`, requestBody);
             console.log(response.status);
             if (response.status === 201) {
                 console.log("Setting success message");
@@ -72,92 +74,92 @@ function Register() {
     }
 
     return (
-        <div className="register-wrapper">
+        <div className="main-container">
             <div className="register-container">
                 <h2>Register</h2>
-                <form onSubmit={handleRegister} className="form">
-                    <div>
-                        <p>Username</p>
-                        <input
+                <Form onSubmit={handleRegister} >
+
+                        <Form.Label>Username</Form.Label>
+                        <Form.Control
                             type="text"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
                             required
                         />
-                    </div>
-                    <div>
-                        <p>Password</p>
-                        <input
+
+
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             required
                         />
-                    </div>
-                    <div>
-                        <p>Email</p>
-                        <input
+
+
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
                         />
-                    </div>
-                    <div>
-                        <p>Address</p>
-                        <input
+
+
+                        <Form.Label>Address</Form.Label>
+                        <Form.Control
                             type="text"
                             value={address}
                             onChange={(e) => setAddress(e.target.value)}
                             required
                         />
-                    </div>
-                    <div>
-                        <p>Role</p>
-                        <select value={role} onChange={(e) => setRole(e.target.value)}>
+
+
+                        <Form.Label>Role</Form.Label>
+                        <Form.Select value={role} onChange={(e) => setRole(e.target.value)}>
                             <option value="STUDENT">Student</option>
                             <option value="ADMIN">Admin</option>
-                        </select>
-                    </div>
+                        </Form.Select>
+
                     {role === 'ADMIN' && (
-                        <div>
-                            <p>Department</p>
-                            <input
+                            <>
+                            <Form.Label>Department</Form.Label>
+                            <Form.Control
                                 type="text"
                                 value={department}
                                 onChange={(e) => setDepartment(e.target.value)}
                                 required
                             />
-                        </div>
+                            </>
+
                     )}
                     {role === 'STUDENT' && (
                         <>
-                            <div>
-                                <p>Major</p>
-                                <input
+
+                                <Form.Label>Major</Form.Label>
+                                <Form.Control
                                     type="text"
                                     value={major}
                                     onChange={(e) => setMajor(e.target.value)}
                                     required
                                 />
-                            </div>
-                            <div>
-                                <p>Year</p>
-                                <input
+
+                                <Form.Label>Year</Form.Label>
+                                <Form.Control
                                     type="text"
                                     value={year}
                                     onChange={(e) => setYear(e.target.value)}
                                     required
                                 />
-                            </div>
+
                         </>
                     )}
                     {error && <p className="error">{error}</p>}
                     {success && <p className="success">{success}</p>}
-                    <button type="submit">Register</button>
-                    <br/>
-                    <button onClick={handleCancelClick}>Cancel</button>
-                </form>
+
+                </Form>
+                <Button type="submit">Register</Button>
+                <Button onClick={handleCancelClick}>Cancel</Button>
             </div>
         </div>
     );

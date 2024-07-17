@@ -5,11 +5,12 @@ import "../styles/ReporterUsers.css";
 
 export default function ReporterUsers() {
     const [reporterUsers, setReporterUsers] = useState([]);
-    const params = useParams();
+    const params= useParams();
+    const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
     const fetchReporterUsers = async () => {
         try {
-            const response = await axios.get(`http://localhost:8080/users/${params.userId}/reporters`);
+            const response = await axios.get(`${apiUrl}/users/${params.userId}/reporters`);
             setReporterUsers(response.data);
         } catch (error) {
             console.error('Error fetching reporter users:', error);

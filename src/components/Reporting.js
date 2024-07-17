@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Reporting.css";
+import {Button} from "react-bootstrap";
 
 export default function Reporting() {
     const navigate = useNavigate();
@@ -19,17 +20,17 @@ export default function Reporting() {
     }
 
     return (
-        <div className="reporting-container">
+        <div>
             <h3>Reporting</h3>
             <div>
-                <button onClick={handleCreateReportingClick}>Create Reporting</button>
+                <Button onClick={handleCreateReportingClick}>Create Reporting</Button>
             </div>
             <div>
-                <button onClick={handleReportInformation}>Report Information By UserID</button>
+                <Button onClick={handleReportInformation}>Report Information By UserID</Button>
             </div>
             {userRole === "ADMIN" && (
                 <div>
-                    <button onClick={handleAllReports}>All Reports</button>
+                    <Button onClick={handleAllReports}>All Reports</Button>
                 </div>
             )}
         </div>
