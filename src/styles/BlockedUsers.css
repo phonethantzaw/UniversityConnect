@@ -1,0 +1,37 @@
+/* BlockedUsers.css */
+.blocked-users-container {
+    padding: 20px;
+    background-color: white;
+}
+
+.blocked-users-container h3 {
+    color: #074E9F;
+}
+
+.blocked-users-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.blocked-users-container li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blocked-users-container button {
+    padding: 5px 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.blocked-users-container button:hover {
+    background-color: #cc0000;
+}

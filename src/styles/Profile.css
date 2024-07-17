@@ -1,5 +1,11 @@
-/* Profile.css */
-
+.profile-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 3px;
+    background-color: #f5f5f5;
+}
 .profile-container {
     display: flex;
     justify-content: center;
@@ -95,7 +101,3 @@
     outline: none;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}

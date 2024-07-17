@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from '../utils/axiosConfig'; // Use the configured Axios instance
+import axios from '../utils/axiosConfig';
 import '../styles/Register.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -72,91 +72,93 @@ function Register() {
     }
 
     return (
-        <div className="container">
-            <h2>Register</h2>
-            <form onSubmit={handleRegister} className="form">
-                <div>
-                    <p>Username</p>
-                    <input
-                        type="text"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                        required
-                    />
-                </div>
-                <div>
-                    <p>Password</p>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
-                </div>
-                <div>
-                    <p>Email</p>
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                </div>
-                <div>
-                    <p>Address</p>
-                    <input
-                        type="text"
-                        value={address}
-                        onChange={(e) => setAddress(e.target.value)}
-                        required
-                    />
-                </div>
-                <div>
-                    <p>Role</p>
-                    <select value={role} onChange={(e) => setRole(e.target.value)}>
-                        <option value="STUDENT">Student</option>
-                        <option value="ADMIN">Admin</option>
-                    </select>
-                </div>
-                {role === 'ADMIN' && (
+        <div className="register-wrapper">
+            <div className="register-container">
+                <h2>Register</h2>
+                <form onSubmit={handleRegister} className="form">
                     <div>
-                        <p>Department</p>
+                        <p>Username</p>
                         <input
                             type="text"
-                            value={department}
-                            onChange={(e) => setDepartment(e.target.value)}
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
                             required
                         />
                     </div>
-                )}
-                {role === 'STUDENT' && (
-                    <>
+                    <div>
+                        <p>Password</p>
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div>
+                        <p>Email</p>
+                        <input
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div>
+                        <p>Address</p>
+                        <input
+                            type="text"
+                            value={address}
+                            onChange={(e) => setAddress(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div>
+                        <p>Role</p>
+                        <select value={role} onChange={(e) => setRole(e.target.value)}>
+                            <option value="STUDENT">Student</option>
+                            <option value="ADMIN">Admin</option>
+                        </select>
+                    </div>
+                    {role === 'ADMIN' && (
                         <div>
-                            <p>Major</p>
+                            <p>Department</p>
                             <input
                                 type="text"
-                                value={major}
-                                onChange={(e) => setMajor(e.target.value)}
+                                value={department}
+                                onChange={(e) => setDepartment(e.target.value)}
                                 required
                             />
                         </div>
-                        <div>
-                            <p>Year</p>
-                            <input
-                                type="text"
-                                value={year}
-                                onChange={(e) => setYear(e.target.value)}
-                                required
-                            />
-                        </div>
-                    </>
-                )}
-                {error && <p className="error">{error}</p>}
-                {success && <p className="success">{success}</p>}
-                <button type="submit">Register</button>
-                <br />
-                <button onClick={handleCancelClick}>Cancel</button>
-            </form>
+                    )}
+                    {role === 'STUDENT' && (
+                        <>
+                            <div>
+                                <p>Major</p>
+                                <input
+                                    type="text"
+                                    value={major}
+                                    onChange={(e) => setMajor(e.target.value)}
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <p>Year</p>
+                                <input
+                                    type="text"
+                                    value={year}
+                                    onChange={(e) => setYear(e.target.value)}
+                                    required
+                                />
+                            </div>
+                        </>
+                    )}
+                    {error && <p className="error">{error}</p>}
+                    {success && <p className="success">{success}</p>}
+                    <button type="submit">Register</button>
+                    <br/>
+                    <button onClick={handleCancelClick}>Cancel</button>
+                </form>
+            </div>
         </div>
     );
 }

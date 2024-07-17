@@ -1,34 +1,37 @@
-import React, {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "../styles/Blocking.css";
 
-export default function Blocking(){
-
-    const [userId, setUserId] = useState('');
+export default function Blocking() {
     const navigate = useNavigate();
-    const onChange = (event) => {
-        setUserId(event.target.value);
+    const userRole = localStorage.getItem('userRole');
+
+    const handleCreateBlockingClick = () => {
+        navigate("/create-blocking");
     }
 
-    const handleBlockedUsersClick = (userId) => {
-        navigate("/blocked-users/" + userId);
+    const handleBlockInformation = () => {
+        navigate("/blocking-information");
     }
 
-    const handleBlockerUsersClick = (userId) => {
-        navigate("/blocker-users/" + userId);
+    const handleAllBlocks = () => {
+        navigate("/all-blocks");
     }
 
-    return(
-        <div>
-            <input type="text"
-                   value={userId}
-                   onChange={onChange}
-                   placeholder="Enter User ID"/>
+    return (
+        <div className="blocking-container">
+            <h3>Blocking</h3>
             <div>
-                <h3>Blocking</h3>
-                <button onClick={() => handleBlockerUsersClick(userId)}>Blockers of UserID: {userId}</button>
-                <br /> <br />
-                <button onClick={() => handleBlockedUsersClick(userId)}>Blockeds of UserID: {userId}</button>
+                <button onClick={handleCreateBlockingClick}>Create Blocking</button>
             </div>
+            <div>
+                <button onClick={handleBlockInformation}>Block Information By UserID</button>
+            </div>
+            {userRole === "ADMIN" && (
+                <div>
+                    <button onClick={handleAllBlocks}>All Blocks</button>
+                </div>
+            )}
         </div>
     )
 }

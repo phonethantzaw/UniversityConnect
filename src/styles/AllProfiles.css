@@ -1,0 +1,55 @@
+/* AllProfiles.css */
+.all-profiles-container {
+    padding: 20px;
+    background-color: white;
+}
+
+.all-profiles-container h3 {
+    color: #074E9F;
+}
+
+.all-profiles-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.all-profiles-container li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.profile-section {
+    margin: 10px 0;
+}
+
+.profile-section h4 {
+    margin: 5px 0;
+    color: #074E9F;
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-container input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-container button {
+    padding: 10px;
+    background-color: #074E9F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #053b79;
+}

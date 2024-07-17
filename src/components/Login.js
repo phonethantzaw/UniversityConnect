@@ -33,23 +33,25 @@ function Login() {
     };
 
     return (
-        <div className="container">
-            <img src={logo} alt="logo" className="logo"/>
-            <h3>Login</h3>
-            <form onSubmit={handleLogin}>
-                <div>
-                    <label>Email:</label>
-                    <br/>
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
-                </div>
-                <div>
-                    <label>Password:</label>
-                    <br/>
-                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
-                </div>
-                {error && <p>{error}</p>}
-                <button type="submit" style={{backgroundColor: "#074E9F"}}>Login</button>
-            </form>
+        <div className="login-wrapper">
+            <div className="login-container">
+                <img src={logo} alt="logo" className="logo"/>
+                <h3 className="login-h3">Login</h3>
+                <form onSubmit={handleLogin}>
+                    <div>
+                        <label className="login-lable">Email:</label>
+                        <br/>
+                        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                    </div>
+                    <div>
+                        <label className="login-lable">Password:</label>
+                        <br/>
+                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
+                    </div>
+                    {error && <p>{error}</p>}
+                    <button type="submit" style={{backgroundColor: "#074E9F"}}>Login</button>
+                </form>
+            </div>
         </div>
     );
 }

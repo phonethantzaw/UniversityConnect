@@ -1,31 +1,37 @@
-import React, {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "../styles/Reporting.css";
 
 export default function Reporting() {
-    const [userId, setUserId] = useState('');
     const navigate = useNavigate();
-    const onChange = (event) => {
-        setUserId(event.target.value);
-    }
-    const handleReporterUsersClick = (userId) => {
-        navigate("/reporter-users/" + userId);
+    const userRole = localStorage.getItem('userRole');
+
+    const handleCreateReportingClick = () => {
+        navigate("/create-reporting");
     }
 
-    const handleReportedUsersClick = (userId) => {
-        navigate("/reported-users/" + userId);
+    const handleReportInformation = () => {
+        navigate("/reporting-information");
+    }
+
+    const handleAllReports = () => {
+        navigate("/all-reports");
     }
 
     return (
-        <div>
-            <input type="text"
-                   value={userId}
-                   onChange={onChange}
-                   placeholder="Enter User ID"/>
+        <div className="reporting-container">
+            <h3>Reporting</h3>
             <div>
-                <h3>Reporting</h3>
-                <button onClick={() => handleReporterUsersClick(userId)}>Reporters of UserID: {userId}</button>
-                <button onClick={() => handleReportedUsersClick(userId)}>Reporteds of UserID: {userId}</button>
+                <button onClick={handleCreateReportingClick}>Create Reporting</button>
             </div>
+            <div>
+                <button onClick={handleReportInformation}>Report Information By UserID</button>
+            </div>
+            {userRole === "ADMIN" && (
+                <div>
+                    <button onClick={handleAllReports}>All Reports</button>
+                </div>
+            )}
         </div>
-    );
+    )
 }
