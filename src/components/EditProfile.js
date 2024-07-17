@@ -7,6 +7,7 @@ function EditProfile({ profile, onEdit, onCancel }) {
     const [achievements, setAchievements] = useState(profile.achievements);
     const [interests, setInterests] = useState(profile.interests);
     const [activities, setActivities] = useState(profile.activities);
+    const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
     const handleSave = async () => {
         const updatedProfile = {
@@ -17,7 +18,7 @@ function EditProfile({ profile, onEdit, onCancel }) {
         };
 
         try {
-            const response = await axios.put(`http://localhost:8080/profiles/${profile.userId}`, updatedProfile);
+            const response = await axios.put(`${apiUrl}/profiles/${profile.userId}`, updatedProfile);
             onEdit(response.data);
         } catch (error) {
             console.error('Error updating profile', error);

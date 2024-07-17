@@ -1,0 +1,24 @@
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.Card {
+    margin-left: 20px;
+}
+
+.nav-links-container {
+    display: flex;
+    flex-direction: row; /* Ensures horizontal layout */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: flex-start; /* Align items to the start of the container */
+}
+
+.add-question-container {
+    text-align: right;
+    margin-right: 15px; /* Adjusts the right margin for spacing, optional */
+}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import axios from '../utils/axiosConfig';
+import axios from '../../utils/axiosConfig';
 import { useParams, useNavigate } from 'react-router-dom';
-import TagSelector from './TagSelector';
+import TagSelector from '../TagSelector';
 
 const defaultAchievements = ["Dean's List", "Research Assistant"];
 const defaultInterests = ["Machine Learning", "Data Science"];
@@ -15,11 +15,12 @@ function UpdateProfile(props) {
     const [activities, setActivities] = useState([]);
     const params = useParams();  // Ensure the URL parameter is 'id'
     const navigate = useNavigate();
+    const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
     useEffect(() => {
         const fetchProfile = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/profiles/${params.id}`);
+                const response = await axios.get(`${apiUrl}/profiles/${params.id}`);
                 setProfile(response.data);
                 setAchievements(response.data.achievements || []);
                 setInterests(response.data.interests || []);
@@ -41,7 +42,7 @@ function UpdateProfile(props) {
         };
 
         try {
-            const response = await axios.put(`http://localhost:8080/profiles/${params.id}`, updatedProfile);
+            const response = await axios.put(`${apiUrl}/profiles/${params.id}`, updatedProfile);
             console.log(props.userId);
             navigate(`/profile/filter/${props.userId}`);
         } catch (error) {
