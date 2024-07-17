@@ -16,9 +16,11 @@ import Event from "./Event";
 import Discussion from "./Discussion";
 import Blocking from "./Blocking";
 import Reporting from "./Reporting";
+import CategoryManagement from "./CategoryManagement";
 
 function Dashboard() {
     const userData = localStorage.getItem('userId');
+    const userId = localStorage.getItem("userId");
     return (
         <Router>
             <Routes>
@@ -38,6 +40,7 @@ function Dashboard() {
                 <Route path="/reporting" element={<Reporting/>}/>
                 <Route path="/reporter-users/:userId" element={<ReporterUsers />}/>
                 <Route path="/reported-users/:userId" element={<ReportedUsers />}/>
+                <Route path="/manage-categories" element={<CategoryManagement/>} />
             </Routes>
         </Router>
     );
