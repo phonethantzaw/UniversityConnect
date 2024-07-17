@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from '../utils/axiosConfig';
 import '../styles/EditEvent.css';
+import {useNavigate, useParams} from "react-router-dom";
 
-const EditEvent = ({ eventId, onClose }) => {
+const EditEvent = (onClose ) => {
+    const navigate = useNavigate();
+    const params = useParams();
     const [event, setEvent] = useState({
         title: '',
         location: '',
@@ -13,7 +16,8 @@ const EditEvent = ({ eventId, onClose }) => {
     useEffect(() => {
         const fetchEvent = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/events/${eventId}`);
+                const response = await axios.get(`http://localhost:8080/events/${params.id}`);
+                // Set the event state with fetched data
                 setEvent(response.data);
             } catch (error) {
                 console.error('Error fetching event', error);
@@ -21,7 +25,7 @@ const EditEvent = ({ eventId, onClose }) => {
         };
 
         fetchEvent();
-    }, [eventId]);
+    }, [params.eventId]); // Fetch event when eventId changes
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -34,8 +38,8 @@ const EditEvent = ({ eventId, onClose }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:8080/events/${eventId}`, event);
-            onClose();
+            await axios.put(`http://localhost:8080/events/${params.id}`, event);
+            navigate("/all-events");
         } catch (error) {
             console.error('Error updating event', error);
         }
