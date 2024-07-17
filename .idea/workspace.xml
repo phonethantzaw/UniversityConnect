@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02ec4c4a-7c7e-4cda-b354-917b59b6a1d7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/EditAttendance.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/EditAttendance.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/UniversityConnect.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/UniversityConnect.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AllEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AllEvents.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Discussion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Discussion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EditEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditEvent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/AllEvents.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/AllEvents.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/CreateEvent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/CreateEvent.css" afterDir="false" />
-    </list>
+    <list default="true" id="02ec4c4a-7c7e-4cda-b354-917b59b6a1d7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,7 +62,7 @@
       <workItem from="1721226681777" duration="4225000" />
       <workItem from="1721231759209" duration="267000" />
       <workItem from="1721232588230" duration="19000" />
-      <workItem from="1721232622493" duration="6777000" />
+      <workItem from="1721232622493" duration="7384000" />
     </task>
     <servers />
   </component>
