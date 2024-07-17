@@ -1,0 +1,36 @@
+.event-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.view-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #074E9F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.view-button:hover {
+    background-color: #063D7A;
+}
+
+.view-container {
+    margin-top: 20px;
+}
+
+.blank-container {
+    min-height: 200px;
+}
