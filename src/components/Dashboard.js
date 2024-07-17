@@ -29,9 +29,10 @@ import AllReports from "./AllReports";
 import AllBlocks from "./AllBlocks";
 import AllProfiles from "./AllProfiles";
 import PrivateRoute from "./PrivateRoute";
-
+import CategoryManagement from "./CategoryManagement";
 function Dashboard() {
     const userData = localStorage.getItem('userId');
+    const userId = localStorage.getItem("userId");
     const isAuthenticated = !!localStorage.getItem('accessToken');
 
     return (
@@ -68,6 +69,7 @@ function Dashboard() {
                 <Route path="/reporter-users/:userId" element={<ReporterUsers />}/>
                 <Route path="/reported-users/:userId" element={<ReportedUsers />}/>
                 <Route path="/create-reporting" element={<CreateReporting/>}/>
+                <Route path="/manage-categories" element={<CategoryManagement/>} />
             </Routes>
         </Router>
     );
