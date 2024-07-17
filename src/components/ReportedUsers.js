@@ -1,15 +1,14 @@
 import axios from "../utils/axiosConfig";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import "../styles/ReportedUsers.css";
 
 export default function ReportedUsers() {
     const [reportedUsers, setReportedUsers] = useState([]);
-    const params = useParams();
+    const userId = localStorage.getItem("userId");
 
     const fetchReportedUsers = async () => {
         try {
-            const response = await axios.get(`http://localhost:8080/users/${params.userId}/reporteds`);
+            const response = await axios.get(`http://localhost:8080/users/${userId}/reporteds`);
             setReportedUsers(response.data);
         } catch (error) {
             console.error('Error fetching reported users:', error);
@@ -21,7 +20,7 @@ export default function ReportedUsers() {
             const response = await axios.get('http://localhost:8080/reports');
             const reportData = response.data;
             console.log('Report Data:', reportData); // Debug log
-            const report = reportData.find(report => report.reportedUserId === reportedUserId && report.reporterUserId === Number(params.userId));
+            const report = reportData.find(report => report.reportedUserId === reportedUserId && report.reporterUserId === Number(userId));
             console.log('Found Report:', report); // Debug log
             return report ? report.id : null;
         } catch (error) {
@@ -45,7 +44,7 @@ export default function ReportedUsers() {
 
     useEffect(() => {
         fetchReportedUsers();
-    }, [params.userId]);
+    }, [userId]);
 
     return (
         <div className="reported-users-container">

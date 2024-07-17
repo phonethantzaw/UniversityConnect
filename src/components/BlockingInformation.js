@@ -36,7 +36,7 @@ export default function BlockingInformation(props) {
                 </div>
             ) : userRole === "STUDENT" ? (
                 <div>
-                    <button onClick={() => handleBlockedUsersClick(props.userData)}>Click to Watch Your Blocked List</button>
+                    <button onClick={() => handleBlockedUsersClick(props.userId)}>Click to Watch Your Blocked List</button>
                 </div>
             ) : null}
         </div>

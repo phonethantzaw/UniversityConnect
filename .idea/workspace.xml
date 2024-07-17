@@ -6,11 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="02ec4c4a-7c7e-4cda-b354-917b59b6a1d7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AllEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AllEvents.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CreateEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CreateEvent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EditEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditEvent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Event.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Event.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BlockedUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BlockedUsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BlockingInformation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BlockingInformation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ReportedUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ReportedUsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ReportingInformation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ReportingInformation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/AdminDashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/AdminDashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/BlockedUsers.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/BlockedUsers.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/CreateEvent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/CreateEvent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ReportedUsers.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ReportedUsers.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +85,7 @@
       <workItem from="1721218305413" duration="2253000" />
       <workItem from="1721226500978" duration="141000" />
       <workItem from="1721226681777" duration="4225000" />
-      <workItem from="1721231759209" duration="267000" />
+      <workItem from="1721231759209" duration="3163000" />
     </task>
     <servers />
   </component>
