@@ -1,9 +1,11 @@
 import axios from "../utils/axiosConfig";
-import {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
-export default function ReporterUsers(){
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import "../styles/ReporterUsers.css";
+
+export default function ReporterUsers() {
     const [reporterUsers, setReporterUsers] = useState([]);
-    const params= useParams();
+    const params = useParams();
 
     const fetchReporterUsers = async () => {
         try {
@@ -18,18 +20,14 @@ export default function ReporterUsers(){
         fetchReporterUsers();
     }, [params.userId]);
 
-    return(
-        <div>
+    return (
+        <div className="reporter-users-container">
             <h3>Reporter User Lists</h3>
             <ul>
-                {
-                    reporterUsers.map(r => {
-                        return(
-                            <li>{r.username}</li>
-                        );
-                    })
-                }
+                {reporterUsers.map(r => (
+                    <li key={r.id}>{r.username}</li>
+                ))}
             </ul>
         </div>
-    )
+    );
 }

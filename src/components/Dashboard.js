@@ -21,10 +21,13 @@ import CreateReporting from "./CreateReporting";
 import EditUser from "./EditUser";
 import CreateUser from "./DeleteUser";
 import DeleteUser from "./DeleteUser";
-import AllUser from "./AllUser";
+import AllUsers from "./AllUsers";
 import User from "./User";
 import BlockingInformation from "./BlockingInformation";
 import ReportingInformation from "./ReportingInformation";
+import AllReports from "./AllReports";
+import AllBlocks from "./AllBlocks";
+import AllProfiles from "./AllProfiles";
 
 function Dashboard() {
     const userData = localStorage.getItem('userId');
@@ -38,13 +41,16 @@ function Dashboard() {
                 <Route path="/user" element={<User />}/>
                 <Route path="/edit-user/:userId" element={<EditUser/>}/>
                 <Route path="/create-user" element={<DeleteUser/>}/>
-                <Route path="/all-user" element={<AllUser />}/>
+                <Route path="/all-user" element={<AllUsers />}/>
                 <Route path="/register" element={<Register />} />
                 <Route path="/profile/filter/:userId" element={<Profile />} />
                 <Route path="/update-profile/:id" element={<UpdateProfile userId={userData}/>}/>
                 <Route path="/resource" element={<Resource/>}/>
                 <Route path="/event" element={<Event />}/>
                 <Route path="/discussion" element={<Discussion/>}/>
+                <Route path="/all-reports" element={<AllReports/>}/>
+                <Route path="/all-blocks" element={<AllBlocks/>}/>
+                <Route path="/all-profiles" element={<AllProfiles/>}/>
                 <Route path="/blocking" element={<Blocking />}/>
                 <Route path="/blocking-information" element={<BlockingInformation userId={userData}/>}/>
                 <Route path="/reporting-information" element={<ReportingInformation userId={userData}/>}/>

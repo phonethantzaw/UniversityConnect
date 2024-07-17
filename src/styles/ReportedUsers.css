@@ -1,0 +1,37 @@
+/* ReportedUsers.css */
+.reported-users-container {
+    padding: 20px;
+    background-color: white;
+}
+
+.reported-users-container h3 {
+    color: #074E9F;
+}
+
+.reported-users-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reported-users-container li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reported-users-container button {
+    padding: 5px 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.reported-users-container button:hover {
+    background-color: #cc0000;
+}

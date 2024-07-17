@@ -15,7 +15,8 @@ function AdminDashboard(props) {
                     <Link to="/blocking" className="nav-link">Blocking</Link>
                     <Link to="/reporting" className="nav-link">Reporting</Link>
                     <Link to="/user" className="nav-link">User</Link>
-                    <Link to={`/profile/filter/${props.userId}`} className="nav-link">Profile</Link>
+                    <Link to="/all-profiles" className="nav-link">All Profiles</Link>
+                    <Link to={`/profile/filter/${props.userId}`} className="nav-link">My Profile</Link>
                 </nav>
                 <div className="admin-content">
                     <div className="welcome-banner">

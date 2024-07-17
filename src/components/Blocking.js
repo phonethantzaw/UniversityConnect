@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
+import "../styles/Blocking.css";
 
 export default function Blocking() {
     const navigate = useNavigate();
-    const handleBlockedUsersClick = (userId) => {
-        navigate("/blocked-users/" + userId);
-    }
+    const userRole = localStorage.getItem('userRole');
 
     const handleCreateBlockingClick = () => {
         navigate("/create-blocking");
@@ -15,15 +14,24 @@ export default function Blocking() {
         navigate("/blocking-information");
     }
 
+    const handleAllBlocks = () => {
+        navigate("/all-blocks");
+    }
+
     return (
-        <div>
+        <div className="blocking-container">
             <h3>Blocking</h3>
             <div>
-                <button onClick={() => handleCreateBlockingClick()}>Create Blocking</button>
+                <button onClick={handleCreateBlockingClick}>Create Blocking</button>
             </div>
-            <>
-                <button onClick={handleBlockInformation}>Block Information</button>
-            </>
+            <div>
+                <button onClick={handleBlockInformation}>Block Information By UserID</button>
+            </div>
+            {userRole === "ADMIN" && (
+                <div>
+                    <button onClick={handleAllBlocks}>All Blocks</button>
+                </div>
+            )}
         </div>
     )
 }

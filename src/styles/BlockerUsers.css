@@ -1,0 +1,22 @@
+/* BlockerUsers.css */
+.blocker-users-container {
+    padding: 20px;
+    background-color: white;
+}
+
+.blocker-users-container h3 {
+    color: #074E9F;
+}
+
+.blocker-users-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.blocker-users-container li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

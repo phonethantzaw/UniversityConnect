@@ -1,10 +1,11 @@
-import {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
 import axios from "../utils/axiosConfig";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import "../styles/BlockerUsers.css";
 
-export default function BlockerUsers(){
+export default function BlockerUsers() {
     const [blockerUsers, setBlockerUsers] = useState([]);
-    const params= useParams();
+    const params = useParams();
 
     const fetchBlockerUsers = async () => {
         try {
@@ -19,20 +20,14 @@ export default function BlockerUsers(){
         fetchBlockerUsers();
     }, [params.userId]);
 
-
-    return(
-        <div>
+    return (
+        <div className="blocker-users-container">
             <h3>Blocker User Lists</h3>
             <ul>
-                {
-                    blockerUsers.map(b => {
-                        return(
-
-                            <li>{b.username}</li>
-                        );
-                    })
-                }
+                {blockerUsers.map(b => (
+                    <li key={b.id}>{b.username}</li>
+                ))}
             </ul>
         </div>
-    )
+    );
 }
