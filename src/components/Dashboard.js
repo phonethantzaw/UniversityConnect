@@ -30,8 +30,9 @@ import AllBlocks from "./AllBlocks";
 import AllProfiles from "./AllProfiles";
 import PrivateRoute from "./PrivateRoute";
 import CategoryManagement from "./CategoryManagement";
-
+import EditEvent from "./EditEvent";
 import CreateEvent from "./CreateEvent";
+import AllEvents from "./AllEvents";
 function Dashboard() {
     const userData = localStorage.getItem('userId');
     const userId = localStorage.getItem("userId");
@@ -72,6 +73,8 @@ function Dashboard() {
                 <Route path="/create-reporting" element={<CreateReporting/>}/>
                 <Route path="/manage-categories" element={<CategoryManagement/>} />
                 <Route path="/create-event" element={<CreateEvent/>}/>
+                <Route path="/all-events" element={<AllEvents/>}/>
+                <Route path="/edit-event/:id" element={<EditEvent/>}/>
             </Routes>
         </Router>
     );

@@ -5,79 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02ec4c4a-7c7e-4cda-b354-917b59b6a1d7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AdminDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AdminDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AllBlocks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AllBlocks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AllProfiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AllProfiles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AllReports.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AllReports.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AllUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AllUsers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BlockedUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BlockedUsers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BlockerUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BlockerUsers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Blocking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Blocking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BlockingInformation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BlockingInformation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CategoryList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CategoryList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CategoryManagement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CategoryManagement.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CreateBlocking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CreateBlocking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CreateReporting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CreateReporting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AllEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AllEvents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CreateEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CreateEvent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DeleteUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DeleteUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Discussion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Discussion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EditProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EditUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditEvent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Event.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Event.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavigationBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavigationBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PrivateRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PrivateRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ReportedUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ReportedUsers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ReporterUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ReporterUsers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Reporting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Reporting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ReportingInformation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ReportingInformation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Resource.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Resource.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/StudentHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StudentHome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TagSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TagSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ThreadedDiscussion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ThreadedDiscussion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UpdateProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UpdateProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/AdminDashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/AdminDashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/AllBlocks.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/AllBlocks.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/AllProfiles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/AllProfiles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/AllReports.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/AllReports.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/AllUser.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/AllUser.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/BlockedUsers.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/BlockedUsers.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/BlockerUsers.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/BlockerUsers.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Blocking.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Blocking.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/BlockingInformation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/BlockingInformation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/CreateBlocking.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/CreateBlocking.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/CreateReporting.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/CreateReporting.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/DeleteUser.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/DeleteUser.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Discussion.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Discussion.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/EditProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/EditProfile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/EditUser.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/EditUser.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Form.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Register.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ReportedUsers.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ReportedUsers.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ReporterUsers.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ReporterUsers.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Reporting.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Reporting.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/StudentPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/StudentPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/TagSelector.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/TagSelector.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/UpdateProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/UpdateProfile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/User.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/User.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/logo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/axiosConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/axiosConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/refreshToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/refreshToken.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,22 +38,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev-gam&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/gam/WAA/react/UniversityConnect&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/gam/idea-IU-233.14475.28/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev-htet",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/htetyadanaroo/Documents/WAA/UniversityConnect",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/home/gam/idea-IU-233.14475.28/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="UniversityConnect" />
@@ -149,10 +82,23 @@
       <workItem from="1721218305413" duration="2253000" />
       <workItem from="1721226500978" duration="141000" />
       <workItem from="1721226681777" duration="4225000" />
+      <workItem from="1721231759209" duration="267000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/EditEvent.js</url>
+          <line>86</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
