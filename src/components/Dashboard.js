@@ -34,7 +34,6 @@ function Dashboard() {
     const userData = localStorage.getItem('userId');
     const userId = localStorage.getItem("userId");
     const isAuthenticated = !!localStorage.getItem('accessToken');
-
     return (
         <Router>
             <Routes>
