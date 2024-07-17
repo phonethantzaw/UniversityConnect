@@ -8,11 +8,12 @@ function EditUser() {
     const navigate = useNavigate();
     const [user, setUser] = useState({});
     const [error, setError] = useState(null);
+    const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
     useEffect(() => {
         const fetchUser = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/users/${userId}`);
+                const response = await axios.get(`${apiUrl}/users/${userId}`);
                 setUser(response.data);
             } catch (err) {
                 setError(err.message);
@@ -31,7 +32,7 @@ function EditUser() {
 
     const handleUpdate = async () => {
         try {
-            await axios.put(`http://localhost:8080/users/${userId}`, user);
+            await axios.put(`${apiUrl}/users/${userId}`, user);
             navigate('/admin/dashboard'); // Redirect to dashboard after update
         } catch (err) {
             setError(err.message);

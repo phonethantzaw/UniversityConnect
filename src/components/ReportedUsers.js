@@ -1,14 +1,17 @@
 import axios from "../utils/axiosConfig";
 import { useEffect, useState } from "react";
 import "../styles/ReportedUsers.css";
+import {useParams} from "react-router-dom";
 
 export default function ReportedUsers() {
     const [reportedUsers, setReportedUsers] = useState([]);
     const userId = localStorage.getItem("userId");
+    const params= useParams();
+    const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
     const fetchReportedUsers = async () => {
         try {
-            const response = await axios.get(`http://localhost:8080/users/${userId}/reporteds`);
+            const response = await axios.get(`${apiUrl}/users/${params.userId}/reporteds`);
             setReportedUsers(response.data);
         } catch (error) {
             console.error('Error fetching reported users:', error);
@@ -44,23 +47,20 @@ export default function ReportedUsers() {
 
     useEffect(() => {
         fetchReportedUsers();
-    }, [userId]);
+    }, [params.userId]);
 
-    return (
-        <div className="reported-users-container">
+    return(
+        <div>
             <h3>Reported User Lists</h3>
-            {reportedUsers.length > 0 ? (
-                <ul>
-                    {reportedUsers.map((r, index) => (
-                        <li key={index}>
-                            {r.username}
-                            <button onClick={() => handleDeleteReportedUser(r.id)}>Remove Report</button>
-                        </li>
-                    ))}
-                </ul>
-            ) : (
-                <p>There is no reported list</p>
-            )}
+            <ul>
+                {
+                    reportedUsers.map(r => {
+                        return(
+                            <li>{r.username}</li>
+                        );
+                    })
+                }
+            </ul>
         </div>
-    );
-}
+    )
+};

@@ -5,11 +5,12 @@ import "../styles/BlockerUsers.css";
 
 export default function BlockerUsers() {
     const [blockerUsers, setBlockerUsers] = useState([]);
-    const params = useParams();
+    const params= useParams();
+    const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
     const fetchBlockerUsers = async () => {
         try {
-            const response = await axios.get(`http://localhost:8080/users/${params.userId}/blockers`);
+            const response = await axios.get(`${apiUrl}/users/${params.userId}/blockers`);
             setBlockerUsers(response.data);
         } catch (error) {
             console.error('Error fetching blocker users:', error);
