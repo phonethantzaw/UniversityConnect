@@ -28,16 +28,23 @@ import ReportingInformation from "./ReportingInformation";
 import AllReports from "./AllReports";
 import AllBlocks from "./AllBlocks";
 import AllProfiles from "./AllProfiles";
+import PrivateRoute from "./PrivateRoute";
 
 function Dashboard() {
     const userData = localStorage.getItem('userId');
+    const isAuthenticated = !!localStorage.getItem('accessToken');
+
     return (
         <Router>
             <Routes>
                 <Route path="/" element={<Login />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/admin/dashboard" element={<AdminDashboard userId={userData}/>} />
-                <Route path="/student/home" element={<StudentHome userId={userData}/>}/>
+                <Route element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
+                    <Route path="/admin/dashboard" element={<AdminDashboard userId={userData} />} />
+                </Route>
+                <Route element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
+                    <Route path="/student/home" element={<StudentHome userId={userData} />} />
+                </Route>
                 <Route path="/user" element={<User />}/>
                 <Route path="/edit-user/:userId" element={<EditUser/>}/>
                 <Route path="/create-user" element={<DeleteUser/>}/>
