@@ -1,6 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import "../styles/Blocking.css";
+import {Button, Form} from "react-bootstrap";
 
 export default function Blocking() {
     const navigate = useNavigate();
@@ -19,19 +20,20 @@ export default function Blocking() {
     }
 
     return (
-        <div className="blocking-container">
-            <h3>Blocking</h3>
-            <div>
-                <button onClick={handleCreateBlockingClick}>Create Blocking</button>
-            </div>
-            <div>
-                <button onClick={handleBlockInformation}>Block Information By UserID</button>
-            </div>
-            {userRole === "ADMIN" && (
-                <div>
-                    <button onClick={handleAllBlocks}>All Blocks</button>
-                </div>
-            )}
+        <div className="main-container">
+
+            <Form>
+                <h3>Blocking</h3>
+                <Button onClick={handleCreateBlockingClick}>Create Blocking</Button>
+
+                <Button onClick={handleBlockInformation}>Block Information By UserID</Button>
+
+                {userRole === "ADMIN" && (
+
+                    <Button onClick={handleAllBlocks}>All Blocks</Button>
+
+                )}
+            </Form>
         </div>
     )
 }

@@ -5,15 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02ec4c4a-7c7e-4cda-b354-917b59b6a1d7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Admin/AdminDashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Admin/Survey.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Admin/SurveyDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MainNav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/User/Resource.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/User/StudentHome.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/useRouteMatch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/Main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AdminDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AdminDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AllProfiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AllProfiles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AllUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AllUsers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/BlockedUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BlockedUsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BlockerUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BlockerUsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Blocking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Blocking.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/BlockingInformation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BlockingInformation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CreateBlocking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CreateBlocking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CreateReporting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CreateReporting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ReportedUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ReportedUsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ReporterUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ReporterUsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Reporting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Reporting.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ReportingInformation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ReportingInformation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/AdminDashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/AdminDashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/BlockedUsers.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/BlockedUsers.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/CreateEvent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/CreateEvent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ReportedUsers.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ReportedUsers.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Resource.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Resource.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/StudentHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StudentHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UpdateProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/User/UpdateProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Register.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/StudentPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/StudentPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/logo.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +68,9 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2jKSIgINato4fCIyDVgjSs2DBz9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -45,7 +79,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "dev-htet",
+    "git-widget-placeholder": "dev-phone",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/htetyadanaroo/Documents/WAA/UniversityConnect",
     "node.js.detected.package.eslint": "true",
@@ -53,7 +87,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/home/gam/idea-IU-233.14475.28/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "ts.external.directory.path": "/Users/kophone/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -98,7 +132,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/EditEvent.js</url>
           <line>86</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

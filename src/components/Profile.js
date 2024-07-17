@@ -7,13 +7,18 @@ function Profile() {
     const [profile, setProfile] = useState(null);
     const [user, setUser] = useState({});
     const [loading, setLoading] = useState(true);
-    const params = useParams();
+    // const params = useParams();
+
+    const userId = localStorage.getItem('userId');
     const navigate = useNavigate();
     const userRole = localStorage.getItem('userRole');
+    const apiUrl = process.env.REACT_APP_API_BASE_URL;
+
+    console.log('userId::::', userId);
 
     const fetchProfile = async () => {
         try {
-            const response = await axios.get(`http://localhost:8080/profiles/filter/${params.userId}`);
+            const response = await axios.get(`${apiUrl}/profiles/filter/${userId}`);
             setProfile(response.data);
         } catch (error) {
             console.error('Error fetching profile:', error);
@@ -24,7 +29,7 @@ function Profile() {
 
     const fetchUser = async () => {
         try {
-            const response = await axios.get(`http://localhost:8080/users/${params.userId}`);
+            const response = await axios.get(`${apiUrl}/users/${userId}`);
             setUser(response.data);
         } catch (error) {
             console.error('Error fetching user:', error);
@@ -34,14 +39,14 @@ function Profile() {
     useEffect(() => {
         fetchProfile();
         fetchUser();
-    }, [params.userId]);
+    }, [userId]);
 
     const handleAdminDashboardClick = () => {
         navigate("/admin/dashboard");
     }
 
     const handleBlockedUsers = () => {
-        navigate("/blocked-users/" + params.userId);
+        navigate("/blocked-users/" + userId);
     }
 
     const handleStudentHomeClick = () => {
