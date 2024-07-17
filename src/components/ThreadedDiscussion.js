@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Post from './Post';
-import { Button, Card, Form, Container } from 'react-bootstrap';
+import { Button, Card, Form, Container, InputGroup, FormControl, Row, Col } from 'react-bootstrap';
 import 'react-quill/dist/quill.snow.css';
 import ReactQuill from 'react-quill';
 import '../styles/Discussion.css';
@@ -12,10 +12,12 @@ const ThreadedDiscussion = ({ category }) => {
     const [newPostText, setNewPostText] = useState('');
     const [newPostTopic, setNewPostTopic] = useState('');
     const [showNewPostForm, setShowNewPostForm] = useState(false);
+    const [showSearch, setShowSearch] = useState(false); // New state for showing search input
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(20);
     const [totalPages, setTotalPages] = useState(1);
     const [editingPostId, setEditingPostId] = useState(null);
+    const [searchQuery, setSearchQuery] = useState(''); // New state for search query
 
     const userId = localStorage.getItem("userId");
 
@@ -44,6 +46,10 @@ const ThreadedDiscussion = ({ category }) => {
 
     const toggleNewPostForm = () => {
         setShowNewPostForm(!showNewPostForm);
+    };
+
+    const toggleSearch = () => {
+        setShowSearch(!showSearch);
     };
 
     const addPost = async () => {
@@ -95,17 +101,31 @@ const ThreadedDiscussion = ({ category }) => {
 
     const paginate = (pageNumber) => getAllPosts(pageNumber);
 
+    // Filter posts based on search query
+    const filteredPosts = posts.filter(post =>
+        post.topic.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        post.description.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
     return (
         <Container className="threaded-discussion-container">
             <h2>{category.name} Discussions</h2>
 
             <Card className="mt-3 post-container">
                 <Card.Body>
-                    {!showNewPostForm && (
-                        <Button variant="primary" onClick={toggleNewPostForm} className="new-post-button">
-                            New Post
-                        </Button>
-                    )}
+                    <Row className="align-items-center mb-3">
+                        <Col>
+                            {!showNewPostForm && (
+                                <Button variant="primary" onClick={toggleNewPostForm} className="new-post-button">
+                                    New Post
+                                </Button>
+                            )}
+                            &nbsp;&nbsp;
+                            <Button variant="secondary" onClick={toggleSearch} className="search-button">
+                                Search
+                            </Button>
+                        </Col>
+                    </Row>
                     {showNewPostForm && (
                         <Form>
                             <Form.Group controlId="formNewPostTopic">
@@ -132,9 +152,18 @@ const ThreadedDiscussion = ({ category }) => {
                             </div>
                         </Form>
                     )}
+                    {showSearch && (
+                        <InputGroup className="mb-3">
+                            <FormControl
+                                placeholder="Search posts"
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                            />
+                        </InputGroup>
+                    )}
                 </Card.Body>
             </Card>
-            {posts.map(post => (
+            {filteredPosts.map(post => (
                 <Post
                     key={post.id}
                     post={post}

@@ -116,7 +116,16 @@ hr.dotted {
 /* CategoryList.css */
 
 .category-button {
+    width: auto;
     min-width: 150px;
     margin-bottom: 10px;
+    margin-right: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    white-space: nowrap;
+}
+
+
+.col-space{
     margin-right: 5px;
 }
