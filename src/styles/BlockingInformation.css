@@ -1,0 +1,26 @@
+/* BlockingInformation.css */
+.blocking-info-container {
+    padding: 20px;
+    background-color: white;
+}
+
+.blocking-info-container input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.blocking-info-container button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #074E9F;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.blocking-info-container button:hover {
+    background-color: #063a7f;
+}

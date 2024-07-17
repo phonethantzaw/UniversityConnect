@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../styles/BlockingInformation.css";
 
 export default function BlockingInformation(props) {
     const [userId, setUserId] = useState('');
@@ -19,7 +20,7 @@ export default function BlockingInformation(props) {
     }
 
     return (
-        <div>
+        <div className="blocking-info-container">
             {userRole === "ADMIN" ? (
                 <div>
                     <input

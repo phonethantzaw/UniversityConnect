@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import DeleteUser from './DeleteUser';
 import '../styles/AllUser.css'; // Import CSS for styling
 
-function AllUser() {
+function AllUsers() {
     const [users, setUsers] = useState([]);
     const [filteredUsers, setFilteredUsers] = useState([]);
     const [error, setError] = useState(null);
@@ -75,4 +75,4 @@ function AllUser() {
     );
 }
 
-export default AllUser;
+export default AllUsers;

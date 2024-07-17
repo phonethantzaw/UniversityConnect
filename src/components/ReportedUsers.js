@@ -1,9 +1,11 @@
 import axios from "../utils/axiosConfig";
-import {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
-export default function ReportedUsers(){
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import "../styles/ReportedUsers.css";
+
+export default function ReportedUsers() {
     const [reportedUsers, setReportedUsers] = useState([]);
-    const params= useParams();
+    const params = useParams();
 
     const fetchReportedUsers = async () => {
         try {
@@ -14,22 +16,52 @@ export default function ReportedUsers(){
         }
     };
 
+    const fetchReportId = async (reportedUserId) => {
+        try {
+            const response = await axios.get('http://localhost:8080/reports');
+            const reportData = response.data;
+            console.log('Report Data:', reportData); // Debug log
+            const report = reportData.find(report => report.reportedUserId === reportedUserId && report.reporterUserId === Number(params.userId));
+            console.log('Found Report:', report); // Debug log
+            return report ? report.id : null;
+        } catch (error) {
+            console.error('Error fetching report ID:', error);
+            return null;
+        }
+    };
+
+    const handleDeleteReportedUser = async (reportedUserId) => {
+        const reportId = await fetchReportId(reportedUserId);
+        console.log('Report ID to delete:', reportId); // Debug log
+        if (reportId) {
+            try {
+                await axios.delete(`http://localhost:8080/reports/${reportId}`);
+                setReportedUsers(prevReportedUsers => prevReportedUsers.filter(user => user.id !== reportedUserId));
+            } catch (error) {
+                console.error('Error deleting reported user:', error);
+            }
+        }
+    };
+
     useEffect(() => {
         fetchReportedUsers();
     }, [params.userId]);
 
-    return(
-        <div>
+    return (
+        <div className="reported-users-container">
             <h3>Reported User Lists</h3>
-            <ul>
-                {
-                    reportedUsers.map(r => {
-                        return(
-                            <li>{r.username}</li>
-                        );
-                    })
-                }
-            </ul>
+            {reportedUsers.length > 0 ? (
+                <ul>
+                    {reportedUsers.map((r, index) => (
+                        <li key={index}>
+                            {r.username}
+                            <button onClick={() => handleDeleteReportedUser(r.id)}>Remove Report</button>
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                <p>There is no reported list</p>
+            )}
         </div>
-    )
-};
+    );
+}
