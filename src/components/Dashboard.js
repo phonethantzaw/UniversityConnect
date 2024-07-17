@@ -33,6 +33,7 @@ import CategoryManagement from "./CategoryManagement";
 import EditEvent from "./EditEvent";
 import CreateEvent from "./CreateEvent";
 import AllEvents from "./AllEvents";
+import EditAttendance from "./EditAttendance";
 function Dashboard() {
     const userData = localStorage.getItem('userId');
     const userId = localStorage.getItem("userId");
@@ -75,6 +76,9 @@ function Dashboard() {
                 <Route path="/create-event" element={<CreateEvent/>}/>
                 <Route path="/all-events" element={<AllEvents/>}/>
                 <Route path="/edit-event/:id" element={<EditEvent/>}/>
+                <Route path="/edit-attendance/:id" element={<EditAttendance />} />
+                <Route path="/edit-attendance/:id/:eventId" element={<EditAttendance />} />
+                <Route path="/add-attendance/:eventId" element={<EditAttendance />} />
             </Routes>
         </Router>
     );

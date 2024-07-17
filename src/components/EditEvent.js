@@ -94,7 +94,7 @@ const EditEvent = (onClose ) => {
                     />
                 </div>
                 <button type="submit">Save Changes</button>
-                <button type="button" onClick={onClose} className="cancel-button">Cancel</button>
+                <button type="button" onClick={()=>navigate("/all-events")} className="cancel-button">Cancel</button>
             </form>
         </div>
     );
