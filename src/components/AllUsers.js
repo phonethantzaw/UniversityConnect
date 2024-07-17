@@ -9,11 +9,12 @@ function AllUsers() {
     const [filteredUsers, setFilteredUsers] = useState([]);
     const [error, setError] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
+    const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/users');
+                const response = await axios.get(`${apiUrl}/users`);
                 setUsers(response.data);
                 setFilteredUsers(response.data); // Initialize filteredUsers with all users
             } catch (err) {
@@ -26,7 +27,7 @@ function AllUsers() {
 
     const handleDelete = async (userId) => {
         try {
-            await axios.delete(`http://localhost:8080/users/${userId}`);
+            await axios.delete(`${apiUrl}/users/${userId}`);
             setUsers(users.filter(user => user.id !== userId)); // Remove deleted user from state
             setFilteredUsers(filteredUsers.filter(user => user.id !== userId)); // Remove from filtered users
         } catch (err) {

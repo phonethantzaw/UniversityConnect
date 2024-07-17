@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect, Fragment} from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "../utils/axiosConfig";
-import "../styles/CreateBlocking.css"; // Import the CSS file
+import "../styles/CreateBlocking.css";
+import {Button, Form} from "react-bootstrap"; // Import the CSS file
 
 export default function CreateBlocking() {
     const [users, setUsers] = useState([]);
@@ -39,24 +40,25 @@ export default function CreateBlocking() {
     };
 
     return (
-        <div className="create-blocking-container">
-            <h3>Create Blocking</h3>
-            <form onSubmit={handleBlockingSubmit}>
-                <label htmlFor="blockedUserId">Select User to Block:</label>
-                <select
+        <div className="main-container">
+
+            <Form onSubmit={handleBlockingSubmit}>
+                <h3>Create Blocking</h3>
+                <Form.Label htmlFor="blockedUserId">Select User to Block:</Form.Label>
+                <Form.Select
                     id="blockedUserId"
-                    style={{color:"black"}}
+                    style={{color: "black"}}
                     value={blockedUserId}
                     onChange={(e) => setBlockedUserId(e.target.value)}
                     required
                 >
-                    <option value="" disabled style={{color:"black"}}>Select a user</option>
+                    <option value="" disabled style={{color: "black"}}>Select a user</option>
                     {users.map(user => (
-                        <option key={user.id} value={user.id} style={{color:"black"}}>{user.username}</option>
+                        <option key={user.id} value={user.id} style={{color: "black"}}>{user.username}</option>
                     ))}
-                </select>
-                <button type="submit">Block User</button>
-            </form>
+                </Form.Select>
+                <Button type="submit">Block User</Button>
+            </Form>
         </div>
     );
 }

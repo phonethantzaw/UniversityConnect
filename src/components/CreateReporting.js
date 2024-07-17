@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "../utils/axiosConfig";
 import "../styles/CreateReporting.css";
+import {Button, Form, FormLabel} from "react-bootstrap";
 
 export default function CreateReporting() {
     const [users, setUsers] = useState([]);
@@ -39,11 +40,13 @@ export default function CreateReporting() {
     };
 
     return (
-        <div className="create-reporting-container">
-            <h3>Create Reporting</h3>
-            <form onSubmit={handleReportingSubmit}>
-                <label htmlFor="reportedUserId">Select User to Report:</label>
-                <select
+        <div>
+        <h3>Create Reporting</h3>
+    <div className="main-container">
+
+            <Form onSubmit={handleReportingSubmit}>
+                <Form.Label htmlFor="reportedUserId">Select User to Report:</Form.Label>
+                <Form.Select
                     id="reportedUserId"
                     style={{color:"black"}}
                     value={reportedUserId}
@@ -54,9 +57,10 @@ export default function CreateReporting() {
                     {users.map(user => (
                         <option key={user.id} value={user.id} style={{color:"black"}}>{user.username}</option>
                     ))}
-                </select>
-                <button type="submit">Report User</button>
-            </form>
+                </Form.Select>
+                <Button type="submit">Report User</Button>
+            </Form>
+        </div>
         </div>
     );
 }

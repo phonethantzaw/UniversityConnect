@@ -30,6 +30,7 @@
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    width: 200px;
 }
 
 .reported-users-container button:hover {

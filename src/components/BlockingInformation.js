@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/BlockingInformation.css";
+import {Button, Form} from "react-bootstrap";
 
 export default function BlockingInformation(props) {
     const [userId, setUserId] = useState('');
@@ -20,25 +21,25 @@ export default function BlockingInformation(props) {
     }
 
     return (
-        <div className="blocking-info-container">
+        <div className="main-container">
             {userRole === "ADMIN" ? (
-                <div>
-                    <input
+                <Form>
+                    <Form.Control
                         type="text"
                         value={userId}
                         onChange={onChange}
                         placeholder="Enter User ID"
                     />
-                    <button onClick={() => handleBlockerUsersClick(userId)}>Blocker Users of UserID: {userId}</button>
-                    <br />
-                    <br />
-                    <button onClick={() => handleBlockedUsersClick(userId)}>Blocked Users of UserID: {userId}</button>
-                </div>
+                    <Button onClick={() => handleBlockerUsersClick(userId)}>Blocker Users of UserID: {userId}</Button>
+
+                    <Button onClick={() => handleBlockedUsersClick(userId)}>Blocked Users of UserID: {userId}</Button>
+                </Form>
             ) : userRole === "STUDENT" ? (
-                <div>
-                    <button onClick={() => handleBlockedUsersClick(props.userData)}>Click to Watch Your Blocked List</button>
-                </div>
+                <Form>
+                    <Button onClick={() => handleBlockedUsersClick(props.userId)}>Click to Watch Your Blocked List</Button>
+                </Form>
             ) : null}
+
         </div>
     );
 }
