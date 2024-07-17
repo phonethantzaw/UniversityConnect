@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from '../utils/axiosConfig';
+import { Link } from 'react-router-dom'; // Import Link for navigation
 import '../styles/AllEvents.css';
-import EditEvent from './EditEvent';
 
-const AllEvents = () => {
+export default function AllEvents() {
     const [events, setEvents] = useState([]);
     const [users, setUsers] = useState([]);
     const [search, setSearch] = useState('');
-    const [editingEventId, setEditingEventId] = useState(null);
 
     useEffect(() => {
         const fetchEvents = async () => {
@@ -41,14 +40,6 @@ const AllEvents = () => {
         }
     };
 
-    const handleEdit = (id) => {
-        setEditingEventId(id);
-    };
-
-    const handleCloseEdit = () => {
-        setEditingEventId(null);
-    };
-
     const filteredEvents = events.filter(event =>
         event.title.toLowerCase().includes(search.toLowerCase())
     );
@@ -76,16 +67,11 @@ const AllEvents = () => {
                         <p>Start: {new Date(event.startDateTime).toLocaleString()}</p>
                         <p>End: {new Date(event.endDateTime).toLocaleString()}</p>
                         <p>Organizer: {getOrganizerName(event.organizerId)}</p>
-                        <button onClick={() => handleEdit(event.id)} className="edit-button">Edit</button>
+                        <Link to={`/edit-event/${event.id}`} className="edit-button">Edit</Link>
                         <button onClick={() => handleDelete(event.id)} className="delete-button">Delete</button>
                     </li>
                 ))}
             </ul>
-            {editingEventId && (
-                <EditEvent eventId={editingEventId} onClose={handleCloseEdit} />
-            )}
         </div>
     );
 };
-
-export default AllEvents;
