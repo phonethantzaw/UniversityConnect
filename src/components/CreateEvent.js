@@ -30,7 +30,7 @@ const CreateEvent = () => {
             setSuccessMessage('Event created successfully'); // Set success message
             setTimeout(() => {
                 setSuccessMessage(''); // Clear success message after a delay
-                navigate.push('/allevents'); // Navigate back to events page
+                navigate('/admin/dashboard'); // Navigate back to events page
             }, 2000); // 2000 milliseconds (2 seconds) delay before navigating
         } catch (error) {
             console.error('Error creating event', error);
