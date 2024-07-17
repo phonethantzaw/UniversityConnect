@@ -31,22 +31,6 @@
     font-size: 16px;
 }
 
-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #074E9F;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #007bff;
-}
-
 .success-message {
     color: green;
     font-weight: bold;

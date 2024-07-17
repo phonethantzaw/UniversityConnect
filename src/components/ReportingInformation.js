@@ -36,7 +36,7 @@ export default function ReportingInformation(props) {
                 </div>
             ) : userRole === "STUDENT" ? (
                 <div>
-                    <button onClick={() => handleReportedUsersClick(props.userData)}>Click to Watch Your Reported List</button>
+                    <button onClick={() => handleReportedUsersClick(props.userId)}>Click to Watch Your Reported List</button>
                 </div>
             ) : null}
         </div>
