@@ -19,7 +19,6 @@ import Reporting from "./Reporting";
 import CreateBlocking from "./CreateBlocking";
 import CreateReporting from "./CreateReporting";
 import EditUser from "./EditUser";
-import DeleteUser from "./DeleteUser";
 import AllUsers from "./AllUsers";
 import BlockingInformation from "./BlockingInformation";
 import ReportingInformation from "./ReportingInformation";
@@ -58,7 +57,6 @@ function Dashboard() {
                 <Route path="/student/home" element={<StudentHome userId={userData}/>}/>
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/edit-user/:userId" element={<EditUser/>}/>
-                <Route path="/create-user" element={<DeleteUser/>}/>
                 <Route path="/all-user" element={<AllUsers/>}/>
                 <Route path="/profile/filter/:userId" element={<Profile/>}/>
                 <Route path="/update-profile/:id" element={<UpdateProfile userId={userData}/>}/>
