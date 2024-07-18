@@ -2,65 +2,71 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.all-events h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #074E9F;
+    text-align: left;
 }
 
 .search-input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #074E9F;
-    border-radius: 4px;
     margin-bottom: 20px;
-    font-size: 16px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .event-item {
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-.event-item h3 {
-    margin: 0;
-    color: #074E9F;
-}
-
-.event-item p {
-    margin: 5px 0;
-    color: #333;
-}
-
-.edit-button, .delete-button {
     padding: 10px;
-    margin: 5px;
-    background-color: #074E9F;
-    color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.edit-button,
+.delete-button,
+.attendance-button,
+.add-attendance-button {
+    margin-right: 10px;
+    padding: 5px 10px;
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.edit-button:hover, .delete-button:hover {
-    background-color: #063D7A;
+.edit-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
 }
 
 .delete-button {
     background-color: #dc3545;
+    color: white;
 }
 
 .delete-button:hover {
     background-color: #c82333;
+}
+
+.attendance-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.attendance-button:hover {
+    background-color: #218838;
+}
+
+.add-attendance-button {
+    display: block;
+    margin: 20px auto;
+    background-color: #17a2b8;
+    color: white;
+    padding: 10px 20px;
+}
+
+.add-attendance-button:hover {
+    background-color: #138496;
 }

@@ -29,11 +29,15 @@ import CategoryManagement from "./CategoryManagement";
 import EditEvent from "./EditEvent";
 import CreateEvent from "./CreateEvent";
 import AllEvents from "./AllEvents";
+
+import EditAttendance from "./EditAttendance";
+
 import {MainNav} from "./MainNav";
 import {SurveyDetail} from "./Admin/SurveyDetail";
 import {Survey} from "./Admin/Survey";
 import {useRouteMatch} from "./useRouteMatch";
 import User from "./User";
+
 
 function Dashboard() {
     const userData = localStorage.getItem('userId');
@@ -83,6 +87,9 @@ function Dashboard() {
                 <Route path="/all-events" element={<AllEvents/>}/>
                 <Route path="/user" element={<User />}/>
                 <Route path="/edit-event/:id" element={<EditEvent/>}/>
+                <Route path="/edit-attendance/:id" element={<EditAttendance />} />
+                <Route path="/edit-attendance/:id/:eventId" element={<EditAttendance />} />
+                <Route path="/add-attendance/:eventId" element={<EditAttendance />} />
             </Routes>
         </>
     );
