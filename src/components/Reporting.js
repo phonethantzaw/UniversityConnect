@@ -26,7 +26,7 @@ export default function Reporting() {
                 <Button onClick={handleCreateReportingClick}>Create Reporting</Button>
             </div>
             <div>
-                <Button onClick={handleReportInformation}>Report Information By UserID</Button>
+                <Button onClick={handleReportInformation}>Report Information</Button>
             </div>
             {userRole === "ADMIN" && (
                 <div>
