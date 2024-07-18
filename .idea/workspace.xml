@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02ec4c4a-7c7e-4cda-b354-917b59b6a1d7" name="Changes" comment="fix" />
+    <list default="true" id="02ec4c4a-7c7e-4cda-b354-917b59b6a1d7" name="Changes" comment="fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AllProfiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AllProfiles.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +42,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "dev-htet",
+    "git-widget-placeholder": "Rebasing dev-htet",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/gam/WAA/react/UniversityConnect",
     "node.js.detected.package.eslint": "true",
