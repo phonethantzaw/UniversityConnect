@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from '../utils/axiosConfig';
 import { Link } from 'react-router-dom';
-import DeleteUser from './DeleteUser';
 import '../styles/AllUser.css'; // Import CSS for styling
 
 function AllUsers() {
@@ -25,15 +24,6 @@ function AllUsers() {
         fetchUsers();
     }, []);
 
-    const handleDelete = async (userId) => {
-        try {
-            await axios.delete(`${apiUrl}/users/${userId}`);
-            setUsers(users.filter(user => user.id !== userId)); // Remove deleted user from state
-            setFilteredUsers(filteredUsers.filter(user => user.id !== userId)); // Remove from filtered users
-        } catch (err) {
-            setError(err.message);
-        }
-    };
 
     const handleSearch = (e) => {
         const searchTerm = e.target.value.toLowerCase();
@@ -65,9 +55,9 @@ function AllUsers() {
                         <h3>{user.username}</h3>
                         <p>Email: {user.email}</p>
                         <p>Role: {user.role}</p>
+                        <p>Address: {user.address}</p>
                         <div className="user-actions">
                             <Link to={`/edit-user/${user.id}`} className="edit-link">Edit</Link>
-                            <DeleteUser userId={user.id} onDelete={() => handleDelete(user.id)} />
                         </div>
                     </div>
                 ))}

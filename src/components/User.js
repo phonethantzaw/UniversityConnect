@@ -1,15 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import '../styles/User.css'
+import {Button} from "react-bootstrap";
 
 function User() {
+    const navigate = useNavigate();
+
+    const handleAllUsersClick = () => {
+        navigate("/all-user");
+    }
+
+    const handleRegisterClick = () => {
+        navigate("/register");
+    }
+
     return (
         <div className="user-container">
             <h2>User Dashboard</h2>
-            <ul>
-                <li><Link to="/all-user">All Users</Link></li>
-                <li><Link to="/register">Register</Link></li>
-            </ul>
+            <Button onClick={handleAllUsersClick}>All Users</Button>
+            <Button onClick={handleRegisterClick}>Register</Button>
         </div>
     );
 }
