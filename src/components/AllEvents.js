@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from '../utils/axiosConfig';
-import { Link } from 'react-router-dom'; // Import Link for navigation
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles/AllEvents.css';
 
 export default function AllEvents() {
     const [events, setEvents] = useState([]);
-    const [users, setUsers] = useState([]);
+    const [attendances, setAttendances] = useState([]);
     const [search, setSearch] = useState('');
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchEvents = async () => {
@@ -18,20 +19,20 @@ export default function AllEvents() {
             }
         };
 
-        const fetchUsers = async () => {
+        const fetchAttendances = async () => {
             try {
-                const usersResponse = await axios.get('http://localhost:8080/users');
-                setUsers(usersResponse.data);
+                const attendancesResponse = await axios.get('http://localhost:8080/events/attendances');
+                setAttendances(attendancesResponse.data);
             } catch (error) {
-                console.error('Error fetching users', error);
+                console.error('Error fetching attendances', error);
             }
         };
 
         fetchEvents();
-        fetchUsers();
+        fetchAttendances();
     }, []);
 
-    const handleDelete = async (id) => {
+    const handleDeleteEvent = async (id) => {
         try {
             await axios.delete(`http://localhost:8080/events/${id}`);
             setEvents(events.filter(event => event.id !== id));
@@ -40,14 +41,18 @@ export default function AllEvents() {
         }
     };
 
+    const handleDeleteAttendance = async (id) => {
+        try {
+            await axios.delete(`http://localhost:8080/events/attendances/${id}`);
+            setAttendances(attendances.filter(attendance => attendance.id !== id));
+        } catch (error) {
+            console.error('Error deleting attendance', error);
+        }
+    };
+
     const filteredEvents = events.filter(event =>
         event.title.toLowerCase().includes(search.toLowerCase())
     );
-
-    const getOrganizerName = (organizerId) => {
-        const organizer = users.find(user => user.id === organizerId);
-        return organizer ? organizer.name : 'Unknown';
-    };
 
     return (
         <div className="all-events">
@@ -66,9 +71,26 @@ export default function AllEvents() {
                         <p>Location: {event.location}</p>
                         <p>Start: {new Date(event.startDateTime).toLocaleString()}</p>
                         <p>End: {new Date(event.endDateTime).toLocaleString()}</p>
-                        <p>Organizer: {getOrganizerName(event.organizerId)}</p>
+                        <p>Organizer: {event.organizerName}</p>
                         <Link to={`/edit-event/${event.id}`} className="edit-button">Edit</Link>
-                        <button onClick={() => handleDelete(event.id)} className="delete-button">Delete</button>
+                        <button onClick={() => handleDeleteEvent(event.id)} className="delete-button">Delete</button>
+                        <h4>Attendances:</h4>
+                        <ul>
+                            {attendances
+                                .filter(attendance => attendance.eventId === event.id)
+                                .map(attendance => (
+                                    <li key={attendance.id}>
+                                        Student ID: {attendance.studentId},
+                                        Check-in: {new Date(attendance.checkInTime).toLocaleString()},
+                                        Check-out: {new Date(attendance.checkOutTime).toLocaleString()}
+                                        <div>
+                                        <Link to={`/edit-attendance/${attendance.id}/${attendance.eventId}`} className="edit-button">Edit</Link>
+                                        <button onClick={() => handleDeleteAttendance(attendance.id)} className="delete-button">Delete</button>
+                                        </div>
+                                    </li>
+                                ))}
+                        </ul>
+                        <button onClick={() => navigate(`/add-attendance/${event.id}`)} className="add-attendance-button">Add Attendance</button>
                     </li>
                 ))}
             </ul>
