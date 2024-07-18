@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "../utils/axiosConfig";
 import NavigationBar from "./NavigationBar";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import CategoryList from "./CategoryList";
 import ThreadedDiscussion from "./ThreadedDiscussion";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 export default function Discussion() {
     const [categories, setCategoriesState] = useState([]);
@@ -32,17 +32,28 @@ export default function Discussion() {
     const navigateToCategoryManagement = () => {
         navigate("/manage-categories");
     };
+    const handleLogout = () => {
+        // Clear the tokens from localStorage
+        localStorage.removeItem('accessToken');
+        localStorage.removeItem('refreshToken');
+        localStorage.removeItem('userRole');
+        localStorage.removeItem('userId');
+
+        // Navigate to the login page
+        navigate('/login');
+    };
 
     return (
         <div>
+
             <Container className="container">
                 <Row>
                     <Col md={3}>
                         <Button variant="primary" onClick={navigateToCategoryManagement}>Manage Categories</Button>
-                        <CategoryList categories={categories} onSelectCategory={handleSelectCategory} />
+                        <CategoryList categories={categories} onSelectCategory={handleSelectCategory}/>
                     </Col>
                     <Col md={9}>
-                        {selectedCategory && <ThreadedDiscussion category={selectedCategory} />}
+                        {selectedCategory && <ThreadedDiscussion category={selectedCategory}/>}
                     </Col>
                 </Row>
             </Container>
