@@ -26,7 +26,7 @@ export default function Blocking() {
                 <h3>Blocking</h3>
                 <Button onClick={handleCreateBlockingClick}>Create Blocking</Button>
 
-                <Button onClick={handleBlockInformation}>Block Information By UserID</Button>
+                <Button onClick={handleBlockInformation}>Block Information</Button>
 
                 {userRole === "ADMIN" && (
 
