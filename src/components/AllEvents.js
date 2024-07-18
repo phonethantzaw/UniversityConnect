@@ -83,8 +83,10 @@ export default function AllEvents() {
                                         Student ID: {attendance.studentId},
                                         Check-in: {new Date(attendance.checkInTime).toLocaleString()},
                                         Check-out: {new Date(attendance.checkOutTime).toLocaleString()}
+                                        <div>
                                         <Link to={`/edit-attendance/${attendance.id}/${attendance.eventId}`} className="edit-button">Edit</Link>
                                         <button onClick={() => handleDeleteAttendance(attendance.id)} className="delete-button">Delete</button>
+                                        </div>
                                     </li>
                                 ))}
                         </ul>

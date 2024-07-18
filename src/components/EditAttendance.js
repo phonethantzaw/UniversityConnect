@@ -96,8 +96,10 @@ const EditAttendance = () => {
                         readOnly
                     />
                 </div>
+                <div>
                 <button type="submit">Save</button>
                 <button type="button" onClick={() => navigate("/all-events")} className="cancel-button">Cancel</button>
+                </div>
             </form>
         </div>
     );

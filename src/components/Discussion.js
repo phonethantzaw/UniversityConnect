@@ -47,15 +47,6 @@ export default function Discussion() {
         <div>
 
             <Container className="container">
-                <nav className="student-nav-bar">
-                    <Link to="/discussion" className="nav-link">Discussion</Link>
-                    <Link to="/resource" className="nav-link">Resource</Link>
-                    <Link to="/event" className="nav-link">Event</Link>
-                    <Link to="/blocking" className="nav-link">Blocking</Link>
-                    <Link to="/reporting" className="nav-link">Reporting</Link>
-                    <Link to={`/profile/filter/${userId}`} className="nav-link">Profile</Link>
-                    <button onClick={handleLogout}>Logout</button>
-                </nav>
                 <Row>
                     <Col md={3}>
                         <Button variant="primary" onClick={navigateToCategoryManagement}>Manage Categories</Button>
